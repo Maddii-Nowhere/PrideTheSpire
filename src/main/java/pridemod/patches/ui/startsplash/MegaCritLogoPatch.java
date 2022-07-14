@@ -1,4 +1,4 @@
-package pridemod.patches.ui;
+package pridemod.patches.ui.startsplash;
 
 import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;

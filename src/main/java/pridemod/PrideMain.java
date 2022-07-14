@@ -1,8 +1,10 @@
 package pridemod;
 
 import basemod.BaseMod;
+import basemod.IUIElement;
 import basemod.ModPanel;
 import basemod.interfaces.*;
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 
 import com.badlogic.gdx.Gdx;
@@ -13,15 +15,25 @@ import com.evacipated.cardcrawl.modthespire.Patcher;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.Label;
+import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
+import jdk.internal.loader.Resource;
+import jdk.internal.module.Resources;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
+import pridemod.ui.FlagDropDown;
 import pridemod.util.GeneralUtils;
 import pridemod.util.KeywordInfo;
 import pridemod.util.TextureLoader;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
 import java.util.*;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
@@ -58,14 +70,22 @@ public class PrideMain implements
         BaseMod.subscribe(this); //This will make BaseMod trigger all the subscribers at their appropriate times.
         logger.info(modID + " subscribed to BaseMod.");
 
-//        try
-//        {
-//            Properties defaults = new Properties();
-//        }
-//        catch (IOException e)
-//        {
-//            logger.warn(e);
-//        }
+        try
+        {
+            Properties defaults = new Properties();
+            defaults.put("Flag", "progress");
+            modConfig = new SpireConfig(modID, "Config", defaults);
+        }
+        catch (IOException e)
+        {
+            logger.warn(e);
+        }
+    }
+
+    public static String getFlag()
+    {
+        if (modConfig == null) return "Error";
+        return modConfig.getString("Flag");
     }
 
     private ModPanel settingsPanel;
@@ -75,13 +95,60 @@ public class PrideMain implements
 
         settingsPanel = new ModPanel();
 
+        settingsPanel.addUIElement(new FlagDropDown(new ArrayList<String>() {{
+            add("Agender");
+            add("Aromantic");
+            add("Asexual");
+            add("Bigender");
+            add("Bisexual");
+            add("Bxy");
+            add("Demiboy");
+            add("Demigirl");
+            add("Gay");
+            add("Gendercreative");
+            add("Genderfluid");
+            add("Genderflux");
+            add("Genderqueer");
+            add("Gxrl");
+            add("Intersex");
+            add("Lesbian");
+            add("Neutrois");
+            add("Nonbinary");
+            add("Nxnbinary");
+            add("Pangender");
+            add("Pansexual");
+            add("Polysexual");
+            add("Progress");
+            add("Transgender");
+            add("TransIntersex");
+        }}, 455 * Settings.xScale, 763 * Settings.yScale, settingsPanel,
+                new Label(FontHelper.buttonLabelFont, "Flag: ", 400 * Settings.xScale, 750 * Settings.yScale, 0, 1, Color.WHITE),
+                dropdown -> {
+            modConfig.setString("Flag", dropdown.selection);
+            saveConfig();
+                }));
+
+
+        saveConfig();
+        //settingsPanel.addUIElement
+
         //This loads the image used as an icon in the in-game mods menu.
         Texture badgeTexture = TextureLoader.getTexture(resourcePath("badge.png"));
         //Set up the mod information displayed in the in-game mods menu.
         //The information used is taken from your pom.xml file.
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, settingsPanel);
 
-        //ImageMaster.
+        ImageMaster.MERCHANT_RUG_IMG = loadImage("pridemod/npcs/merchant/merchantObjects.png");
+    }
+
+    public enum UIStringIDs
+    {
+        FLAG_EXPLANATION(modID + ":Pride Text");
+        public final String ID;
+        UIStringIDs(String id)
+        {
+            this.ID = id;
+        }
     }
 
     /*----------Localization----------*/
@@ -124,8 +191,9 @@ public class PrideMain implements
 //                localizationPath(lang, "PowerStrings.json"));
 //        BaseMod.loadCustomStringsFile(RelicStrings.class,
 //                localizationPath(lang, "RelicStrings.json"));
-//        BaseMod.loadCustomStringsFile(UIStrings.class,
-//                localizationPath(lang, "UIStrings.json"));
+        //TODO langauges
+        BaseMod.loadCustomStringsFile(UIStrings.class,
+                localizationPath("eng", "UIStrings.json"));
     }
 
     @Override
