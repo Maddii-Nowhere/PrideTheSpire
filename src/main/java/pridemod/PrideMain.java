@@ -139,6 +139,8 @@ public class PrideMain implements
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, settingsPanel);
 
         ImageMaster.MERCHANT_RUG_IMG = loadImage("pridemod/npcs/merchant/merchantObjects.png");
+
+
     }
 
     public enum UIStringIDs
@@ -154,11 +156,11 @@ public class PrideMain implements
     /*----------Localization----------*/
 
     //This is used to load the appropriate localization files based on language.
-    private static String getLangString()
+    public static String getLangString()
     {
         return Settings.language.name().toLowerCase();
     }
-    private static final String defaultLanguage = "eng";
+    public static final String defaultLanguage = "eng";
 
     @Override
     public void receiveEditStrings() {

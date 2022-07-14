@@ -4,84 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c64c9592-9f82-4a34-bcde-044e2863419c" name="Changes" comment="Rainbow Megacrit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/titlebg/PrideSpire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/toppanel/PridePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/ui/FlagDropDown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/agender.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/aromantic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/asexual.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/bigender.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/bisexual.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/bxy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/demiboy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/demigirl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/gay.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/gendercreative.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/genderfluid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/genderflux.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/genderqueer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/gxrl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/intersex.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/lesbian.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/neutrois.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/nonbinary.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/nxnbinary.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/pangender.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/pansexual.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/polysexual.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/progress.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/agender.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/aromantic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/asexual.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/bear_pride_flag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/bigender.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/bisexual.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/bxy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/demiboy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/demigirl.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/doe_pride_flag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/gay.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/gendercreative.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/genderfluid.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/genderflux.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/genderqueer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/gxrl.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/intersex.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/lesbian.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/neutrois.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/nonbinary.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/nxnbinary.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/pangender.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/pansexual.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/polysexual.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/progress.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/trans_intersex.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/svgs/transgender.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/transgender.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/flags/transintersex.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/merchant/merchantObjects.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/merchant/merchantObjects.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui.atlas" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/mainmenu/prideRock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/mainmenu/title.atlas" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/mainmenu/title.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/mainmenu/title.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/mainmenu/title2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/mainmenu/title3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/mainmenu/title4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/mainmenu/title5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/mainmenu/title6.png" afterDir="false" />
+    <list default="true" id="c64c9592-9f82-4a34-bcde-044e2863419c" name="Changes" comment="Draw the rest of the owl">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/merchant/PrideShop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/deu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/eng.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/epo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/fin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/fra.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/ita.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/jpn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/kor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/rus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/tha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/ukr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/zhs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/potions/rainbowLiquid_CARD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/potions/rainbowLiquid_m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/potions/rainbowLiquid_t.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/PrideMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/PrideMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/patches/test/Help.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/MegaCritLogoPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/startsplash/MegaCritLogoPatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/localization/eng/UIStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pridemod/localization/eng/UIStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/toppanel/PridePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/toppanel/PridePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/merchant/merchantObjects.png-autosave.kra" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/merchant/merchantObjects.png-autosave.kra" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,16 +59,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/Programs/StS/PrideMod/src/main/resources/pridemod/ui/cardui"
+    "last_opened_file_path": "D:/Programs/StS/PrideMod/src/main/resources/pridemod/ui/potions"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programs\StS\PrideMod\src\main\resources\pridemod\ui\potions" />
       <recent name="D:\Programs\StS\PrideMod\src\main\resources\pridemod\ui\cardui" />
       <recent name="D:\Programs\StS\PrideMod\src\main\java\pridemod\patches\ui\mainmenu" />
       <recent name="D:\Programs\StS\PrideMod\src\main\resources\pridemod\ui" />
       <recent name="D:\Programs\StS\PrideMod\src\main\resources\pridemod\localization" />
-      <recent name="D:\Programs\StS\PrideMod\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Programs\StS\PrideMod\src\main\resources\pridemod\ui" />
@@ -158,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657656953960</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Draw the rest of the owl">
+      <created>1657821439491</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657821439491</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,7 +126,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Rainbow Megacrit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rainbow Megacrit" />
+    <MESSAGE value="Draw the rest of the owl" />
+    <option name="LAST_COMMIT_MESSAGE" value="Draw the rest of the owl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -189,11 +141,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/pridemod/patches/ui/mainmenu/MainMenuPatches.java</url>
           <line>20</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pridemod/patches/ui/titlebg/PrideSpire.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
