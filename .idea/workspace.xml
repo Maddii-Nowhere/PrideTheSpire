@@ -4,28 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c64c9592-9f82-4a34-bcde-044e2863419c" name="Changes" comment="Draw the rest of the owl">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/merchant/PrideShop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/deu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/eng.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/epo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/fin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/fra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/ita.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/jpn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/kor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/rus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/tha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/ukr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/rugs/zhs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/potions/rainbowLiquid_CARD.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/potions/rainbowLiquid_m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/potions/rainbowLiquid_t.png" afterDir="false" />
+    <list default="true" id="c64c9592-9f82-4a34-bcde-044e2863419c" name="Changes" comment="Better potions, shopkeep rug">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/monsters/TransientPatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/vfx/SmokeBlurPatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/monsters/transient/old_transient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/monsters/transient/skeleton.atlas" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/monsters/transient/skeleton.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/monsters/transient/transient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/defect2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/defect2.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/ironclad2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/silent2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/watcher2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/vfx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/vfx.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/vfx/smoke/bigBlur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/vfx/smoke/smallBlur.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/PrideMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/PrideMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/toppanel/PridePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/toppanel/PridePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/merchant/merchantObjects.png-autosave.kra" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/merchant/merchantObjects.png-autosave.kra" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/titlebg/PrideSpire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/titlebg/PrideSpire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/ui/FlagDropDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/ui/FlagDropDown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/badge.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pridemod/badge.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/localization/eng/UIStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pridemod/localization/eng/UIStrings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,18 +61,19 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/Programs/StS/PrideMod/src/main/resources/pridemod/ui/potions"
+    "last_opened_file_path": "D:/Programs/StS/PrideMod/src/main/resources/pridemod/monsters/transient"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programs\StS\PrideMod\src\main\resources\pridemod\monsters\transient" />
       <recent name="D:\Programs\StS\PrideMod\src\main\resources\pridemod\ui\potions" />
       <recent name="D:\Programs\StS\PrideMod\src\main\resources\pridemod\ui\cardui" />
       <recent name="D:\Programs\StS\PrideMod\src\main\java\pridemod\patches\ui\mainmenu" />
       <recent name="D:\Programs\StS\PrideMod\src\main\resources\pridemod\ui" />
-      <recent name="D:\Programs\StS\PrideMod\src\main\resources\pridemod\localization" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programs\StS\PrideMod\src\main\resources\pridemod\monsters\transient" />
       <recent name="D:\Programs\StS\PrideMod\src\main\resources\pridemod\ui" />
     </key>
   </component>
@@ -109,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657821439491</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Better potions, shopkeep rug">
+      <created>1657842617187</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657842617188</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,16 +137,12 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Rainbow Megacrit" />
     <MESSAGE value="Draw the rest of the owl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Draw the rest of the owl" />
+    <MESSAGE value="Better potions, shopkeep rug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Better potions, shopkeep rug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../../SteamLibrary/steamapps/common/SlayTheSpire/desktop-1.0.jar!/com/badlogic/gdx/controllers/Controllers.class</url>
-          <line>25</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pridemod/patches/ui/mainmenu/MainMenuPatches.java</url>
           <line>20</line>

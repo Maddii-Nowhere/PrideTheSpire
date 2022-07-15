@@ -2,7 +2,7 @@
   "modid": "${modID}",
   "name": "${project.name}",
   "author_list": ["${author}"],
-  "credits": "Alison, Maddii and the StS Discord",
+  "credits": "Alison, Pandemonium, Blank, Jerry, Jobby, Boomer, kio, EricB, Rucodeby, fiiiiilth, Alchyr and the StS Discord",
   "description": "${project.description}",
   "version": "${project.version}",
   "sts_version": "${SlayTheSpire.version}",

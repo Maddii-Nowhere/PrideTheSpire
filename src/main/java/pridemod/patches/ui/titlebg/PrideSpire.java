@@ -30,11 +30,6 @@ public class PrideSpire
     public static Texture flag = TextureLoader.getTexture(resourcePath("flags/" + PrideMain.getFlag().toLowerCase() +".png"));
     public static Texture prideRock = TextureLoader.getTexture(resourcePath("ui/mainmenu/prideRock.png"));
 
-    public PrideSpire()
-    {
-
-    }
-
     @SpirePatch(clz=TitleBackground.class, method=SpirePatch.CONSTRUCTOR)
     public static class RainbowSpire
     {
@@ -85,7 +80,6 @@ public class PrideSpire
         @SpireInstrumentPatch
         public static ExprEditor Instrument()
         {
-
             return new ExprEditor()
             {
                 public void edit(NewExpr e) throws CannotCompileException

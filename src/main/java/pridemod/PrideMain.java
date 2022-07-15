@@ -1,10 +1,10 @@
 package pridemod;
 
 import basemod.BaseMod;
-import basemod.IUIElement;
 import basemod.ModPanel;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 
 import com.badlogic.gdx.Gdx;
@@ -19,9 +19,6 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.Label;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
-import jdk.internal.loader.Resource;
-import jdk.internal.module.Resources;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
@@ -30,10 +27,8 @@ import pridemod.util.GeneralUtils;
 import pridemod.util.KeywordInfo;
 import pridemod.util.TextureLoader;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Path;
 import java.util.*;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
@@ -70,22 +65,42 @@ public class PrideMain implements
         BaseMod.subscribe(this); //This will make BaseMod trigger all the subscribers at their appropriate times.
         logger.info(modID + " subscribed to BaseMod.");
 
+        Properties pridemodDefaultSettings = new Properties();
+        pridemodDefaultSettings.setProperty(ConfigField.FLAG.id, "progress");
+        pridemodDefaultSettings.setProperty(ConfigField.INDEX.id, String.valueOf(22));
         try
         {
-            Properties defaults = new Properties();
-            defaults.put("Flag", "progress");
-            modConfig = new SpireConfig(modID, "Config", defaults);
+            modConfig = new SpireConfig(modID, "PrideModConfig", pridemodDefaultSettings);
         }
         catch (IOException e)
         {
-            logger.warn(e);
+            logger.error("Pride Mod config initialisation failed:");
+            e.printStackTrace();
         }
+    }
+
+    public enum ConfigField
+    {
+        INDEX("Index"),
+        FLAG("Flag");
+
+        final String id;
+        ConfigField(String val)
+        {
+            this.id = val;
+        }
+    }
+
+    public static int getIndex()
+    {
+        if (modConfig == null) return 0;
+        return modConfig.getInt(ConfigField.INDEX.id);
     }
 
     public static String getFlag()
     {
         if (modConfig == null) return "Error";
-        return modConfig.getString("Flag");
+        return modConfig.getString(ConfigField.FLAG.id);
     }
 
     private ModPanel settingsPanel;
@@ -124,13 +139,14 @@ public class PrideMain implements
         }}, 455 * Settings.xScale, 763 * Settings.yScale, settingsPanel,
                 new Label(FontHelper.buttonLabelFont, "Flag: ", 400 * Settings.xScale, 750 * Settings.yScale, 0, 1, Color.WHITE),
                 dropdown -> {
-            modConfig.setString("Flag", dropdown.selection);
-            saveConfig();
+                    modConfig.setString("Flag", dropdown.selection);
+                    saveConfig();
+                },
+                index -> {
+                    modConfig.setInt("Index", index);
+                    saveConfig();
                 }));
-
-
         saveConfig();
-        //settingsPanel.addUIElement
 
         //This loads the image used as an icon in the in-game mods menu.
         Texture badgeTexture = TextureLoader.getTexture(resourcePath("badge.png"));
@@ -139,8 +155,10 @@ public class PrideMain implements
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, settingsPanel);
 
         ImageMaster.MERCHANT_RUG_IMG = loadImage("pridemod/npcs/merchant/merchantObjects.png");
-
-
+        Texture l = loadImage("pridemod/vfx/smoke/bigBlur.png");
+        ImageMaster.EXHAUST_L = new TextureAtlas.AtlasRegion(l, 0, 0, l.getWidth(), l.getHeight());
+        l = loadImage("pridemod/vfx/smoke/smallBlur.png");
+        ImageMaster.EXHAUST_S = new TextureAtlas.AtlasRegion(l, 0, 0, l.getWidth(), l.getHeight());
     }
 
     public enum UIStringIDs
