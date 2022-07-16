@@ -41,7 +41,6 @@ public class CutscenePatch
                             e.replace("$_ = new com.megacrit.cardcrawl.cutscenes.CutscenePanel(\"" + "pridemod/scenes/watcher2.png" + "\");");
                         }
                     }
-
                 }
             };
         }

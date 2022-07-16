@@ -73,30 +73,4 @@ public class PrideSpire
         }
     }
 
-    @SpirePatch(clz=ImageMaster.class,method="initialize")
-    public static class CardUIPatch
-    {
-        protected static int count = 0;
-        @SpireInstrumentPatch
-        public static ExprEditor Instrument()
-        {
-            return new ExprEditor()
-            {
-                public void edit(NewExpr e) throws CannotCompileException
-                {
-                    if (e.getClassName().equals(TextureAtlas.class.getName()))
-                    {
-                        if (count < 1)
-                        {
-                            count++;
-                        }
-                        else
-                        {
-                            e.replace("$_ = new " + TextureAtlas.class.getName() + "(\"pridemod/ui/cardui/cardui.atlas\");");
-                        }
-                    }
-                }
-            };
-        }
-    }
 }

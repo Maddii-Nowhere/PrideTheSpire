@@ -23,6 +23,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
 import pridemod.ui.FlagDropDown;
+import pridemod.ui.FlagPreview;
+import pridemod.ui.PrideCheckBox;
 import pridemod.util.GeneralUtils;
 import pridemod.util.KeywordInfo;
 import pridemod.util.TextureLoader;
@@ -68,6 +70,7 @@ public class PrideMain implements
         Properties pridemodDefaultSettings = new Properties();
         pridemodDefaultSettings.setProperty(ConfigField.FLAG.id, "progress");
         pridemodDefaultSettings.setProperty(ConfigField.INDEX.id, String.valueOf(22));
+        pridemodDefaultSettings.setProperty(ConfigField.RARE_BANNER.id, String.valueOf(true));
         try
         {
             modConfig = new SpireConfig(modID, "PrideModConfig", pridemodDefaultSettings);
@@ -82,7 +85,8 @@ public class PrideMain implements
     public enum ConfigField
     {
         INDEX("Index"),
-        FLAG("Flag");
+        FLAG("Flag"),
+        RARE_BANNER("Banner");
 
         final String id;
         ConfigField(String val)
@@ -91,6 +95,11 @@ public class PrideMain implements
         }
     }
 
+    public static boolean getBannerConfig()
+    {
+        if (modConfig == null) return true;
+        return modConfig.getBool(ConfigField.RARE_BANNER.id);
+    }
     public static int getIndex()
     {
         if (modConfig == null) return 0;
@@ -110,6 +119,7 @@ public class PrideMain implements
 
         settingsPanel = new ModPanel();
 
+        settingsPanel.addUIElement(new FlagPreview(455 * Settings.xScale, 300 * Settings.yScale));
         settingsPanel.addUIElement(new FlagDropDown(new ArrayList<String>() {{
             add("Agender");
             add("Aromantic");
@@ -139,13 +149,21 @@ public class PrideMain implements
         }}, 455 * Settings.xScale, 763 * Settings.yScale, settingsPanel,
                 new Label(FontHelper.buttonLabelFont, "Flag: ", 400 * Settings.xScale, 750 * Settings.yScale, 0, 1, Color.WHITE),
                 dropdown -> {
-                    modConfig.setString("Flag", dropdown.selection);
+                    modConfig.setString(ConfigField.FLAG.id, dropdown.selection);
+                    FlagPreview.setFlag(dropdown.selection);
                     saveConfig();
                 },
                 index -> {
-                    modConfig.setInt("Index", index);
+                    modConfig.setInt(ConfigField.INDEX.id, index);
                     saveConfig();
                 }));
+        settingsPanel.addUIElement(new PrideCheckBox(1000 * Settings.xScale, 725 * Settings.yScale, settingsPanel, "Enable Rare Rainbow Banners", getBannerConfig(), FontHelper.charDescFont, prideCheckBox ->
+        {
+            modConfig.setBool(ConfigField.RARE_BANNER.id, prideCheckBox.enabled);
+            saveConfig();
+            switchRareBanner();
+        }));
+
         saveConfig();
 
         //This loads the image used as an icon in the in-game mods menu.
@@ -155,10 +173,34 @@ public class PrideMain implements
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, settingsPanel);
 
         ImageMaster.MERCHANT_RUG_IMG = loadImage("pridemod/npcs/merchant/merchantObjects.png");
-        Texture l = loadImage("pridemod/vfx/smoke/bigBlur.png");
-        ImageMaster.EXHAUST_L = new TextureAtlas.AtlasRegion(l, 0, 0, l.getWidth(), l.getHeight());
-        l = loadImage("pridemod/vfx/smoke/smallBlur.png");
-        ImageMaster.EXHAUST_S = new TextureAtlas.AtlasRegion(l, 0, 0, l.getWidth(), l.getHeight());
+        Texture bigBlur = loadImage("pridemod/vfx/smoke/bigBlur.png");
+        ImageMaster.EXHAUST_L = new TextureAtlas.AtlasRegion(bigBlur, 0, 0, bigBlur.getWidth(), bigBlur.getHeight());
+        Texture smallBlur = loadImage("pridemod/vfx/smoke/smallBlur.png");
+        ImageMaster.EXHAUST_S = new TextureAtlas.AtlasRegion(smallBlur, 0, 0, smallBlur.getWidth(), smallBlur.getHeight());
+
+        largeDefaultBanner = loadImage("pridemod/ui/cardui/banner_rareL.png");
+        smallDefaultBanner = loadImage("pridemod/ui/cardui/banner_rareS.png");
+        largeRainbowRareBanner = loadImage("pridemod/ui/cardui/banner_rare1024.png");
+        smallRainbowRareBanner = loadImage("pridemod/ui/cardui/banner_rare512.png");
+        switchRareBanner();
+    }
+
+    private static Texture smallRainbowRareBanner;
+    private static Texture largeRainbowRareBanner;
+    private static Texture smallDefaultBanner;
+    private static Texture largeDefaultBanner;
+    public void switchRareBanner()
+    {
+        if (getBannerConfig())
+        {
+            ImageMaster.CARD_BANNER_RARE = new TextureAtlas.AtlasRegion(smallRainbowRareBanner, 0, 0, smallRainbowRareBanner.getWidth(), smallRainbowRareBanner.getHeight());
+            ImageMaster.CARD_BANNER_RARE_L = new TextureAtlas.AtlasRegion(largeRainbowRareBanner, 0, 0, largeRainbowRareBanner.getWidth(), largeRainbowRareBanner.getHeight());
+        }
+        else
+        {
+            ImageMaster.CARD_BANNER_RARE = new TextureAtlas.AtlasRegion(smallDefaultBanner, 0, 0, smallDefaultBanner.getWidth(), smallDefaultBanner.getHeight());
+            ImageMaster.CARD_BANNER_RARE_L = new TextureAtlas.AtlasRegion(largeDefaultBanner, 0, 0, largeDefaultBanner.getWidth(), largeDefaultBanner.getHeight());
+        }
     }
 
     public enum UIStringIDs

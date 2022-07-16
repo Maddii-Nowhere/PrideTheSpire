@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c64c9592-9f82-4a34-bcde-044e2863419c" name="Changes" comment="Fixed config problems. TRANSient. Rainbow smoke effects.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/scenes/CutscenePatch.java" afterDir="false" />
+    <list default="true" id="c64c9592-9f82-4a34-bcde-044e2863419c" name="Changes" comment="Rainbow victory cutscenes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/cards/PrideRareBanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/ui/FlagPreview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/ui/PrideCheckBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/banner_rare1024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/banner_rare512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/banner_rareL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/banner_rareS.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/defect2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/defect2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/defect2.png-autosave.kra" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/ironclad2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/ironclad2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/silent2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/silent2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/watcher2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pridemod/scenes/watcher2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/PrideMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/PrideMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/patches/scenes/CutscenePatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/scenes/CutscenePatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/titlebg/PrideSpire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/titlebg/PrideSpire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/merchant/merchantObjects.png-autosave.kra" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui.png-autosave.kra" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/vfx.png-autosave.kra" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +69,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="JarApplication" nameIsGenerated="true">
+    <configuration name="mts-debug" type="JarApplication">
       <option name="JAR_PATH" value="$PROJECT_DIR$/../../../SteamLibrary/steamapps/workshop/content/646570/1605060445/ModTheSpire.jar" />
       <option name="WORKING_DIRECTORY" value="D:\SteamLibrary\steamapps\common\SlayTheSpire" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -110,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657928901252</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Rainbow victory cutscenes">
+      <created>1657942861155</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657942861155</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,7 +144,8 @@
     <MESSAGE value="Draw the rest of the owl" />
     <MESSAGE value="Better potions, shopkeep rug" />
     <MESSAGE value="Fixed config problems. TRANSient. Rainbow smoke effects." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed config problems. TRANSient. Rainbow smoke effects." />
+    <MESSAGE value="Rainbow victory cutscenes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rainbow victory cutscenes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
