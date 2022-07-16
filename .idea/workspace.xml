@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c64c9592-9f82-4a34-bcde-044e2863419c" name="Changes" comment="Rainbow victory cutscenes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/cards/PrideRareBanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/ui/FlagPreview.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pridemod/ui/PrideCheckBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/banner_rare1024.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/banner_rare512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/banner_rareL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/banner_rareS.png" afterDir="false" />
+    <list default="true" id="c64c9592-9f82-4a34-bcde-044e2863419c" name="Changes" comment="Rare Banner config options and refactored to no longer replace the whole atlas. Added flag preview in config menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/PrideMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/PrideMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/patches/scenes/CutscenePatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/scenes/CutscenePatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/titlebg/PrideSpire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/patches/ui/titlebg/PrideSpire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/npcs/merchant/merchantObjects.png-autosave.kra" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui.png-autosave.kra" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/vfx.png-autosave.kra" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pridemod/ui/FlagDropDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pridemod/ui/FlagDropDown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/ui/cardui/cardui4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pridemod/vfx.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657942861155</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Rare Banner config options and refactored to no longer replace the whole atlas. Added flag preview in config menu">
+      <created>1658006379223</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658006379223</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,7 +146,8 @@
     <MESSAGE value="Better potions, shopkeep rug" />
     <MESSAGE value="Fixed config problems. TRANSient. Rainbow smoke effects." />
     <MESSAGE value="Rainbow victory cutscenes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rainbow victory cutscenes" />
+    <MESSAGE value="Rare Banner config options and refactored to no longer replace the whole atlas. Added flag preview in config menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rare Banner config options and refactored to no longer replace the whole atlas. Added flag preview in config menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -54,13 +54,16 @@ public class FlagDropDown implements DropdownMenuListener, IUIElement
     @Override
     public void changedSelectionTo(DropdownMenu dropdownMenu, int i, String s)
     {
-        selection = s;
-        PrideSpire.flag = TextureLoader.getTexture(resourcePath("flags/" + s.toLowerCase() +".png"));
-        PridePanel.flag = TextureLoader.getTexture(resourcePath("flags/" + s.toLowerCase() +".png"));
+        selection = s.toLowerCase();
+        PrideSpire.flag = TextureLoader.getTexture(resourcePath("flags/" + selection +".png"));
 
-        this.explanation = new Label(FontHelper.tipBodyFont, getExplanationText(uiStrings.TEXT_DICT.get(s.toLowerCase())), 1200 * Settings.xScale, 500 * Settings.yScale, 0, 1, Color.WHITE);
+        this.explanation = new Label(FontHelper.tipBodyFont, getExplanationText(uiStrings.TEXT_DICT.get(selection)), 1200 * Settings.xScale, 500 * Settings.yScale, 0, 1, Color.WHITE);
         flagDropDownConsumer.accept(this);
         integerConsumer.accept(i);
+
+        String hpHeart = selection;
+        if (selection.equals("progress")) hpHeart = "gay";
+        PridePanel.flag = TextureLoader.getTexture(resourcePath("flags/" + hpHeart +".png"));
     }
 
     private String getExplanationText(String s)
