@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.core.Settings;
@@ -17,11 +18,13 @@ import javassist.CtBehavior;
 import javassist.NotFoundException;
 import javassist.expr.ExprEditor;
 import javassist.expr.FieldAccess;
+import javassist.expr.MethodCall;
 import javassist.expr.NewExpr;
 import pridemod.PrideMain;
 import pridemod.util.TextureLoader;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static pridemod.PrideMain.resourcePath;
 
@@ -33,16 +36,22 @@ public class PrideSpire
     @SpirePatch(clz=TitleBackground.class, method=SpirePatch.CONSTRUCTOR)
     public static class RainbowSpire
     {
+        public static TextureAtlas.AtlasRegion get()
+        {
+            Texture t = TextureLoader.getTexture("pridemod/ui/mainmenu/mg3Top.png");
+            return new TextureAtlas.AtlasRegion(t, 0, 0, t.getWidth(), t.getHeight());
+        }
         @SpireInstrumentPatch
         public static ExprEditor Instrument()
         {
             return new ExprEditor()
             {
-                public void edit(NewExpr e) throws CannotCompileException
+                public void edit(FieldAccess f) throws CannotCompileException
                 {
-                    if (e.getClassName().equals(TextureAtlas.class.getName()))
+                    if (f.getFieldName().equals("mg3Top"))
                     {
-                        e.replace("$_ = new " + TextureAtlas.class.getName() + "(\"pridemod/ui/mainmenu/title.atlas\");");
+
+                        f.replace("$proceed(pridemod.patches.ui.titlebg.PrideSpire.RainbowSpire.get());");
                     }
                 }
             };
@@ -59,7 +68,7 @@ public class PrideSpire
             spriteBatch.setColor(Color.WHITE);
 
             spriteBatch.draw(flag, 1620 * Settings.xScale, -45.0F * Settings.scale * __instance.slider + 400 * Settings.yScale, 240 * Settings.xScale, 144 * Settings.yScale, 0, 0, flag.getWidth(), flag.getHeight(), true, false);
-            spriteBatch.draw(prideRock, 1300 * Settings.xScale, -45.0F * Settings.scale * __instance.slider + -40 * Settings.yScale, prideRock.getWidth() * Settings.xScale, prideRock.getHeight() * Settings.yScale);
+            spriteBatch.draw(prideRock, 1500 * Settings.xScale, -45.0F * Settings.scale * __instance.slider + -40 * Settings.yScale, prideRock.getWidth() * Settings.xScale, prideRock.getHeight() * Settings.yScale);
         }
 
         private static class Locator extends SpireInsertLocator {

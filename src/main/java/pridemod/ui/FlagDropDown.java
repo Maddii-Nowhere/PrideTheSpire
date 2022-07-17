@@ -69,16 +69,16 @@ public class FlagDropDown implements DropdownMenuListener, IUIElement
     private String getExplanationText(String s)
     {
         String[] explanationText = s.split("\\s");
-        String resultText = "";
+        StringBuilder resultText = new StringBuilder();
         for (int j = 0; j < explanationText.length; j++)
         {
             if (j % 10 == 9)
             {
-                resultText += "\n";
+                resultText.append("\n");
             }
-            resultText += explanationText[j] + " ";
+            resultText.append(explanationText[j]).append(" ");
         }
-        return resultText;
+        return resultText.toString();
     }
 
     @Override

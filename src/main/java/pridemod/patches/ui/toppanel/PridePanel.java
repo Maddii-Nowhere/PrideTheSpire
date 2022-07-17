@@ -93,9 +93,9 @@ public class PridePanel
     @SpirePatch(clz=AbstractPotion.class,method="render")
     public static class RainbowPotion
     {
-        private static Texture rainbow_T = ImageMaster.loadImage("pridemod/ui/potions/rainbowLiquid_t.png");
-        private static Texture rainbow_M = ImageMaster.loadImage("pridemod/ui/potions/rainbowLiquid_m.png");
-        private static Texture rainbow_C = ImageMaster.loadImage("pridemod/ui/potions/rainbowLiquid_CARD.png");
+        private static Texture rainbow_T = TextureLoader.getTexture("pridemod/ui/potions/rainbowLiquid_t.png");
+        private static Texture rainbow_M = TextureLoader.getTexture("pridemod/ui/potions/rainbowLiquid_m.png");
+        private static Texture rainbow_C = TextureLoader.getTexture("pridemod/ui/potions/rainbowLiquid_CARD.png");
         @SpirePostfixPatch()
         public static void Postfix(AbstractPotion __instance, SpriteBatch spriteBatch)
         {

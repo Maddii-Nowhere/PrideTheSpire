@@ -33,7 +33,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
-import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
+//import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
 
 
 /*
@@ -172,16 +172,16 @@ public class PrideMain implements
         //The information used is taken from your pom.xml file.
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, settingsPanel);
 
-        ImageMaster.MERCHANT_RUG_IMG = loadImage("pridemod/npcs/merchant/merchantObjects.png");
-        Texture bigBlur = loadImage("pridemod/vfx/smoke/bigBlur.png");
+        ImageMaster.MERCHANT_RUG_IMG = TextureLoader.getTexture("pridemod/npcs/merchant/merchantObjects.png");
+        Texture bigBlur = TextureLoader.getTexture("pridemod/vfx/smoke/bigBlur.png");
         ImageMaster.EXHAUST_L = new TextureAtlas.AtlasRegion(bigBlur, 0, 0, bigBlur.getWidth(), bigBlur.getHeight());
-        Texture smallBlur = loadImage("pridemod/vfx/smoke/smallBlur.png");
+        Texture smallBlur = TextureLoader.getTexture("pridemod/vfx/smoke/smallBlur.png");
         ImageMaster.EXHAUST_S = new TextureAtlas.AtlasRegion(smallBlur, 0, 0, smallBlur.getWidth(), smallBlur.getHeight());
 
-        largeDefaultBanner = loadImage("pridemod/ui/cardui/banner_rareL.png");
-        smallDefaultBanner = loadImage("pridemod/ui/cardui/banner_rareS.png");
-        largeRainbowRareBanner = loadImage("pridemod/ui/cardui/banner_rare1024.png");
-        smallRainbowRareBanner = loadImage("pridemod/ui/cardui/banner_rare512.png");
+        largeDefaultBanner = TextureLoader.getTexture("pridemod/ui/cardui/banner_rareL.png");
+        smallDefaultBanner = TextureLoader.getTexture("pridemod/ui/cardui/banner_rareS.png");
+        largeRainbowRareBanner = TextureLoader.getTexture("pridemod/ui/cardui/banner_rare1024.png");
+        smallRainbowRareBanner = TextureLoader.getTexture("pridemod/ui/cardui/banner_rare512.png");
         switchRareBanner();
     }
 

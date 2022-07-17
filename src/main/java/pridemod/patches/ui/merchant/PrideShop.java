@@ -7,6 +7,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.shop.ShopScreen;
+import pridemod.util.TextureLoader;
 
 import java.util.ArrayList;
 
@@ -21,9 +22,9 @@ public class PrideShop
         @SpirePostfixPatch
         public static void Postfix(ShopScreen __instance, ArrayList<AbstractCard> coloredCards, ArrayList<AbstractCard> colorlessCards)
         {
-            Texture rug = ImageMaster.loadImage("pridemod/npcs/rugs/" + defaultLanguage.toLowerCase() + ".png");
+            Texture rug = TextureLoader.getTexture("pridemod/npcs/rugs/" + defaultLanguage.toLowerCase() + ".png");
             if (!defaultLanguage.equals(getLangString())) {
-                rug = ImageMaster.loadImage("pridemod/npcs/rugs/" + getLangString().toLowerCase() + ".png");;
+                rug = TextureLoader.getTexture("pridemod/npcs/rugs/" + getLangString().toLowerCase() + ".png");;
         }
             ReflectionHacks.setPrivate(__instance, ShopScreen.class, "rugImg", rug);
         }
