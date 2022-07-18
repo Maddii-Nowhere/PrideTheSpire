@@ -41,7 +41,6 @@ public class PrideLasers
 			initShader();
 			if (shader != null) {
 				sb.setShader(shader);
-				ShaderProgram.pedantic = true;
 				shader.setUniformf("u_xStart", ___x);
 				shader.setUniformf("u_xEnd", ___flipHorizontal ? 0 : Settings.WIDTH);
 			}
@@ -64,7 +63,6 @@ public class PrideLasers
 			initShader();
 			if (shader != null) {
 				sb.setShader(shader);
-				ShaderProgram.pedantic = true;
 				shader.setUniformf("u_xStart", ___x);
 				shader.setUniformf("u_xEnd", 0);
 			}
@@ -87,7 +85,6 @@ public class PrideLasers
 			initShader();
 			if (shader != null) {
 				sb.setShader(shader);
-				ShaderProgram.pedantic = true;
 				// Bronze Orbs treat the player as the "source" and themselves
 				// as the "destination" of this vfx for some reason
 				shader.setUniformf("u_xStart", ___dX);
