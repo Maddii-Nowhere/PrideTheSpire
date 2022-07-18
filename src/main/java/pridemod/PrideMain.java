@@ -332,4 +332,37 @@ public class PrideMain implements
             e.printStackTrace();
         }
     }
+
+    private static final String[] colors = {"efc851", "7fff00", "ff6563", "87ceeb", Settings.PURPLE_COLOR.toString()};
+    private static final Random colorRand = new Random();
+    private static String randColor(String input)
+    {
+        StringBuilder retVal = new StringBuilder();
+        Scanner s = new Scanner(input);
+
+        int last = -1;
+
+        while (s.hasNext()) {
+            int num;
+            do {
+                num = colorRand.nextInt(colors.length);
+            } while (num == last);
+            last = num;
+
+            retVal.append("[#").append(colors[num]).append("]").append(s.next());
+            retVal.append("[] ");
+        }
+
+        s.close();
+        return retVal.toString();
+    }
+
+    private static String originalDescription = null;
+    public static void randomizeDescriptionColors()
+    {
+        if (originalDescription == null) {
+            originalDescription = info.Description;
+        }
+        info.Description = randColor(originalDescription);
+    }
 }
