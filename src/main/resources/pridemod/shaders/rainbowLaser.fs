@@ -15,33 +15,43 @@ bool compare(float fragX, float colorX) {
     }
 }
 
+vec3 RED    = vec3(1, 0, 0);
+vec3 ORANGE = vec3(1, 0.65, 0);
+vec3 YELLOW = vec3(1, 1, 0);
+vec3 GREEN  = vec3(0, 1, 0);
+vec3 BLUE   = vec3(0, 0, 1);
+vec3 INDIGO = vec3(0.29, 0, 0.5);
+vec3 VIOLET = vec3(0.5, 0, 1);
+
 void main() {
     vec4 texColor = texture2D(u_texture, v_texCoord);
 
     float step = 1.0 / 7;
-    float xRed = mix(u_xStart, u_xEnd, step * 1);
-    float xOrange = mix(u_xStart, u_xEnd, step * 2);
-    float xYellow = mix(u_xStart, u_xEnd, step * 3);
-    float xGreen = mix(u_xStart, u_xEnd, step * 4);
-    float xBlue = mix(u_xStart, u_xEnd, step * 5);
-    float xIndigo = mix(u_xStart, u_xEnd, step * 6);
-    float xViolet = mix(u_xStart, u_xEnd, step * 7);
+    float xRed = mix(u_xStart, u_xEnd, step * 0.5);
+    float xOrange = mix(u_xStart, u_xEnd, step * 1.5);
+    float xYellow = mix(u_xStart, u_xEnd, step * 2.5);
+    float xGreen = mix(u_xStart, u_xEnd, step * 3.5);
+    float xBlue = mix(u_xStart, u_xEnd, step * 4.5);
+    float xIndigo = mix(u_xStart, u_xEnd, step * 5.5);
+    float xViolet = mix(u_xStart, u_xEnd, step * 6.5);
 
+    vec3 rainbowColor = v_color.rgb;
     if (compare(gl_FragCoord.x, xRed)) {
-        gl_FragColor = texColor * vec4(1, 0, 0, v_color.a);
+        rainbowColor = RED;
     } else if (compare(gl_FragCoord.x, xOrange)) {
-        gl_FragColor = texColor * vec4(1, 0.65, 0, v_color.a);
+        rainbowColor = mix(RED, ORANGE, (gl_FragCoord.x - xRed) / (xOrange - xRed));
     } else if (compare(gl_FragCoord.x, xYellow)) {
-        gl_FragColor = texColor * vec4(1, 1, 0, v_color.a);
+        rainbowColor = mix(ORANGE, YELLOW, (gl_FragCoord.x - xOrange) / (xYellow - xOrange));
     } else if (compare(gl_FragCoord.x, xGreen)) {
-        gl_FragColor = texColor * vec4(0, 1, 0, v_color.a);
+        rainbowColor = mix(YELLOW, GREEN , (gl_FragCoord.x - xYellow) / (xGreen - xYellow));
     } else if (compare(gl_FragCoord.x, xBlue)) {
-        gl_FragColor = texColor * vec4(0, 0, 1, v_color.a);
+        rainbowColor = mix(GREEN, BLUE, (gl_FragCoord.x - xGreen) / (xBlue - xGreen));
     } else if (compare(gl_FragCoord.x, xIndigo)) {
-        gl_FragColor = texColor * vec4(0.29, 0, 0.5, v_color.a);
+        rainbowColor = mix(BLUE, INDIGO, (gl_FragCoord.x - xBlue) / (xIndigo - xBlue));
     } else if (compare(gl_FragCoord.x, xViolet)) {
-        gl_FragColor = texColor * vec4(0.5, 0, 1, v_color.a);
+        rainbowColor = mix(INDIGO, VIOLET, (gl_FragCoord.x - xIndigo) / (xViolet - xIndigo));
     } else {
-        gl_FragColor = texColor * v_color;
+        rainbowColor = VIOLET;
     }
+    gl_FragColor = texColor * vec4(rainbowColor, v_color.a);
 }
