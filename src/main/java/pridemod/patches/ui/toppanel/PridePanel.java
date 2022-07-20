@@ -89,29 +89,4 @@ public class PridePanel
             return SpireReturn.Return();
         }
     }
-
-    @SpirePatch(clz=AbstractPotion.class,method="render")
-    public static class RainbowPotion
-    {
-        private static Texture rainbow_T = TextureLoader.getTexture("pridemod/ui/potions/rainbowLiquid_t.png");
-        private static Texture rainbow_M = TextureLoader.getTexture("pridemod/ui/potions/rainbowLiquid_m.png");
-        private static Texture rainbow_C = TextureLoader.getTexture("pridemod/ui/potions/rainbowLiquid_CARD.png");
-        @SpirePostfixPatch()
-        public static void Postfix(AbstractPotion __instance, SpriteBatch spriteBatch)
-        {
-            float angle = ReflectionHacks.getPrivate(__instance, AbstractPotion.class, "angle");
-            if (__instance instanceof DistilledChaosPotion)
-            {
-                spriteBatch.draw(rainbow_T, __instance.posX - 32.0F, __instance.posY - 32.0F, 32.0F, 32.0F, 64.0F, 64.0F, __instance.scale, __instance.scale, angle, 0, 0, 64, 64, false, false);
-            }
-            if (__instance instanceof EntropicBrew)
-            {
-                spriteBatch.draw(rainbow_M, __instance.posX - 32.0F, __instance.posY - 32.0F, 32.0F, 32.0F, 64.0F, 64.0F, __instance.scale, __instance.scale, angle, 0, 0, 64, 64, false, false);
-            }
-            if (__instance instanceof DuplicationPotion)
-            {
-                spriteBatch.draw(rainbow_C, __instance.posX - 32.0F, __instance.posY - 32.0F, 32.0F, 32.0F, 64.0F, 64.0F, __instance.scale, __instance.scale, angle, 0, 0, 64, 64, false, false);
-            }
-        }
-    }
 }
